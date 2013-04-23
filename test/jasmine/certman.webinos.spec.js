@@ -6,6 +6,16 @@ var CertificateManager = require("../../lib/certificate");
 var WebinosPath = require("webinos-utilities").webinosPath;
 var webinosName = "WebinosPZP";
 var certConfig = require("../../config.json").params;
+
+var RSA_START       = "-----BEGIN RSA PRIVATE KEY-----";
+var RSA_END         = "-----END RSA PRIVATE KEY-----";
+var CERT_REQ_START  = "-----BEGIN CERTIFICATE REQUEST-----";
+var CERT_REQ_END    = "-----END CERTIFICATE REQUEST-----";
+var CERT_START      = "-----BEGIN CERTIFICATE-----";
+var CERT_END        = "-----END CERTIFICATE-----";
+var CRL_START       = "-----BEGIN X509 CRL-----";
+var CRL_END         = "-----END X509 CRL-----";
+
 var metaData  = {
     webinosType: "Pzp",
     webinosRoot: WebinosPath.webinosPath(),
